@@ -92,7 +92,7 @@ export const GYM_DATA = {
   title: "DC Fitness Club",
   locationBadge: "1st & 2nd Floor • In-House",
   tagline: "Zero Winter Commute Fitness in Hamirpur",
-  hours: "6:00 AM – 10:00 PM Daily",
+  hours: "6:00 AM – 9:00 AM • 5:00 PM – 9:00 PM",
   heroImage: "./images/gym_interior.jpg",
   overview: "A modern, well-lit residential fitness center inside DC Complex Hamirpur featuring commercial cardio treadmills, cross-trainers, heavy dumbbell racks (2.5kg – 35kg), squat racks, clean black rubber gym flooring, and expansive mountain pine daylight views.",
   equipment: [
@@ -114,12 +114,12 @@ export const GYM_DATA = {
     },
     {
       title: "Resident Monthly",
-      price: "₹600",
+      price: "₹500",
       period: "/month",
       badge: "Exclusive Resident Discount",
       popular: true,
-      desc: "Heavily subsidized 50% discount rate exclusive to tenants living in DC Complex rooms.",
-      features: ["Unlimited 30-day access", "6:00 AM – 10:00 PM anytime access", "Locker & filtered water", "Free routine guidance"]
+      desc: "Heavily subsidized discount rate exclusive to tenants living in DC Complex rooms.",
+      features: ["Unlimited 30-day access", "6:00 AM – 9:00 AM • 5:00 PM – 9:00 PM access", "Locker & filtered water", "Free routine guidance"]
     },
     {
       title: "Non-Resident Monthly",
