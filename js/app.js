@@ -69,9 +69,9 @@ export function closeModal(id) {
 export function openScheduleModal(roomId) {
   const select = document.getElementById('sched-room');
   if (select && roomId) {
-    if (roomId === 'deluxe') select.value = 'Deluxe Room with Balcony (₹8,500/mo)';
-    if (roomId === 'standard') select.value = 'Standard Furnished Room (₹6,500/mo)';
-    if (roomId === 'studio') select.value = 'Studio Suite with Kitchenette (₹11,000/mo)';
+    if (roomId === 'deluxe') select.value = 'Deluxe Room with Balcony (Rs. 8,500/mo)';
+    if (roomId === 'standard') select.value = 'Standard Furnished Room (Rs. 6,500/mo)';
+    if (roomId === 'studio') select.value = 'Studio Suite with Kitchenette (Rs. 11,000/mo)';
   }
   
   // Set default date to tomorrow

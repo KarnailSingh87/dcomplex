@@ -19,7 +19,7 @@ export const ROOMS_DATA = [
     id: "deluxe",
     title: "Deluxe Room with Balcony",
     badge: "Most Popular Choice",
-    price: "₹8,500",
+    price: "Rs. 8,500",
     period: "/month",
     status: "Available (2 Left)",
     statusColor: "emerald",
@@ -39,7 +39,7 @@ export const ROOMS_DATA = [
     id: "standard",
     title: "Standard Furnished Room",
     badge: "Budget Friendly",
-    price: "₹6,500",
+    price: "Rs. 6,500",
     period: "/month",
     status: "Available (1 Left)",
     statusColor: "emerald",
@@ -59,7 +59,7 @@ export const ROOMS_DATA = [
     id: "studio",
     title: "Studio Suite with Kitchenette",
     badge: "Self-Contained Living",
-    price: "₹11,000",
+    price: "Rs. 11,000",
     period: "/month",
     status: "Waitlist for Next Month",
     statusColor: "amber",
@@ -106,7 +106,7 @@ export const GYM_DATA = {
   pricing: [
     {
       title: "Resident Day Pass",
-      price: "₹50",
+      price: "Rs. 50",
       period: "per session",
       badge: "Pay As You Go",
       desc: "Instant access for residents on days they wish to workout without any long commitment.",
@@ -114,7 +114,7 @@ export const GYM_DATA = {
     },
     {
       title: "Resident Monthly",
-      price: "₹500",
+      price: "Rs. 500",
       period: "/month",
       badge: "Exclusive Resident Discount",
       popular: true,
@@ -123,7 +123,7 @@ export const GYM_DATA = {
     },
     {
       title: "Non-Resident Monthly",
-      price: "₹1,200",
+      price: "Rs. 1,200",
       period: "/month",
       badge: "Public Membership",
       desc: "For local professionals and university students living in adjacent Hamirpur areas.",
