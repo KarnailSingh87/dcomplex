@@ -93,7 +93,7 @@ export const GYM_DATA = {
   locationBadge: "1st & 2nd Floor • In-House",
   tagline: "Zero Winter Commute Fitness in Hamirpur",
   hours: "6:00 AM – 9:00 AM • 5:00 PM – 9:00 PM",
-  heroImage: "./images/gym_interior.jpg",
+  heroImage: "./images/gym_inside.jpg",
   overview: "A modern, well-lit residential fitness center inside DC Complex Hamirpur featuring commercial cardio treadmills, cross-trainers, heavy dumbbell racks (2.5kg – 35kg), squat racks, clean black rubber gym flooring, and expansive mountain pine daylight views.",
   equipment: [
     { title: "Commercial Treadmills & Ellipticals", desc: "Shock-absorbing motorized running decks with digital tracking" },
@@ -137,7 +137,7 @@ export const GROCERY_DATA = {
   locationBadge: "Ground Floor • Active",
   tagline: "Zero-Commute Everyday Essentials",
   hours: "7:30 AM – 10:00 PM Daily",
-  heroImage: "./images/grocery.jpg",
+  heroImage: "./images/grocery_store.jpg",
   overview: "Located right on the ground floor of DC Complex. Stocked daily with farm-fresh milk, Himachali curd, pantry staples, toiletries, and late-night snacks so you never have to walk to the main bazaar in the cold.",
   categories: [
     {
