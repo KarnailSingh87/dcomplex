@@ -2,8 +2,8 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "cleanUrls": false,
   "rewrites": [
+    { "source": "/google9746e0c0d32770dc", "destination": "/google9746e0c0d32770dc.html" },
     { "source": "/rooms", "destination": "/rooms.html" },
     { "source": "/gym", "destination": "/gym.html" },
     { "source": "/grocery", "destination": "/grocery.html" },
