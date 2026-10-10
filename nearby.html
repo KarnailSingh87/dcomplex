@@ -444,7 +444,7 @@
             </div>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
-          <a class="h-12 px-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs flex items-center justify-between shadow-sm active:scale-98 transition-all" href="https://maps.apple.com/?daddr=31.683243,76.549011&q=DIWAN+GENERAL+STORE&dirflg=d" target="_blank">
+          <a class="h-12 px-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs flex items-center justify-between shadow-sm active:scale-98 transition-all" href="maps://?daddr=31.683243,76.549011&q=DIWAN+GENERAL+STORE&dirflg=d" onclick="navigateToAppleMaps(event)">
             <div class="flex items-center gap-2.5">
               <span class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-sky-300">
                 <span class="material-symbols-outlined text-[18px]">map</span>
@@ -474,6 +474,16 @@
       if (modal) {
         modal.classList.remove('open');
         document.body.style.overflow = '';
+      }
+    }
+    function navigateToAppleMaps(e) {
+      if (e) e.preventDefault();
+      const isApple = /(Macintosh|MacIntel|iPad|iPhone|iPod)/i.test(navigator.userAgent) || 
+                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (isApple) {
+        window.location.href = "maps://?daddr=31.683243,76.549011&q=DIWAN+GENERAL+STORE&dirflg=d";
+      } else {
+        window.open("https://maps.apple.com/?saddr=Current+Location&daddr=31.683243,76.549011&dirflg=d", "_blank");
       }
     }
     document.addEventListener('DOMContentLoaded', () => {

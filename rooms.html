@@ -141,7 +141,7 @@
 <!-- Hero Visual Card -->
 <div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-lowest shadow-md">
 <div class="relative h-56 w-full">
-<img alt="Sunlit Himalayan guest room at DC Complex Hamirpur featuring a polished solid pine wood double bed, private hill-view balcony overlooking terrace fields and Dhauladhar ranges, attached spotless ensuite with water geyser, warm hardwood flooring, and contemporary kitchenette corner" class="w-full h-full object-cover" src="./images/hero_room.jpg"/>
+<img alt="Furnished bedroom at DC Complex Hamirpur featuring cozy double bed, air conditioning, modern pendant lighting, wall art, and ambient bedside lighting" class="w-full h-full object-cover" src="./images/dc_bedroom.jpg?v=2"/>
 <!-- Verified Badge Over Image -->
 <div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm shadow-sm">
 <span class="w-2 h-2 rounded-full bg-secondary-container"></span>
@@ -567,7 +567,7 @@
 <div class="modal-backdrop fixed inset-0 z-50 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all" id="modal-gym">
 <div class="modal-panel bg-white w-full max-w-md rounded-t-3xl sm:rounded-2xl overflow-hidden flex flex-col shadow-2xl transform translate-y-full sm:translate-y-4">
 <div class="relative h-40 bg-neutral-100 overflow-hidden">
-<img alt="Fitness Gym" class="w-full h-full object-cover" src="./images/gym.jpg"/>
+<img alt="Fitness Gym" class="w-full h-full object-cover" src="./images/gym.jpg?v=2"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 <button aria-label="Close" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors" onclick="closeModal('modal-gym')">
 <span class="material-symbols-outlined text-[18px]">close</span>
@@ -752,6 +752,17 @@
       }
     }
 
+    function navigateToAppleMaps(e) {
+      if (e) e.preventDefault();
+      const isApple = /(Macintosh|MacIntel|iPad|iPhone|iPod)/i.test(navigator.userAgent) || 
+                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (isApple) {
+        window.location.href = "maps://?daddr=31.683243,76.549011&q=DIWAN+GENERAL+STORE&dirflg=d";
+      } else {
+        window.open("https://maps.apple.com/?saddr=Current+Location&daddr=31.683243,76.549011&dirflg=d", "_blank");
+      }
+    }
+
     // Dismiss modal on backdrop click
     document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
       backdrop.addEventListener('click', function(e) {
@@ -819,7 +830,7 @@
 
         <!-- Apple Maps Direct Navigation -->
         <a class="h-12 px-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-semibold text-xs flex items-center justify-between shadow-sm active:scale-98 transition-all"
-           href="https://maps.apple.com/?daddr=31.683243,76.549011&q=DIWAN+GENERAL+STORE&dirflg=d" target="_blank">
+           href="maps://?daddr=31.683243,76.549011&q=DIWAN+GENERAL+STORE&dirflg=d" onclick="navigateToAppleMaps(event)">
           <div class="flex items-center gap-2.5">
             <span class="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center text-sky-300">
               <span class="material-symbols-outlined text-[18px]">map</span>

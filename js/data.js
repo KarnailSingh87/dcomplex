@@ -7,7 +7,7 @@ export const COMPLEX_INFO = {
   phoneDisplay: "+91 62300 13209",
   whatsappUrl: "https://wa.me/916230013209?text=Hi%2C%20I%20am%20inquiring%20about%20rooms%20and%20amenities%20at%20DC%20Complex%20Hamirpur",
   mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=31.6833974,76.5488218",
-  appleMapsUrl: "https://maps.apple.com/?daddr=31.6833974,76.5488218&q=DIWAN+GENERAL+STORE&dirflg=d",
+  appleMapsUrl: "maps://?daddr=31.6833974,76.5488218&q=DIWAN+GENERAL+STORE&dirflg=d",
   address: "DIWAN GENERAL STORE, Tauni Devi Kakdiyar Rd, Hamirpur, Himachal Pradesh 177001",
   govtRegistered: "HP Govt. Registered",
   vacancies: "3 Rooms Left",
