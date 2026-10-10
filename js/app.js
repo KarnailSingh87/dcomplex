@@ -100,12 +100,12 @@ export function handleScheduleSubmit(e) {
   const notes = document.getElementById('sched-notes')?.value || '';
 
   const message = `*Room Viewing Request - DC Complex Hamirpur*\n` +
-    `• *Name:* ${name}\n` +
-    `• *Phone:* ${phone}\n` +
-    `• *Selected Room:* ${room}\n` +
-    `• *Preferred Date:* ${date}\n` +
-    `• *Time Slot:* ${time}\n` +
-    (notes ? `• *Notes:* ${notes}\n` : '') +
+    `- *Name:* ${name}\n` +
+    `- *Phone:* ${phone}\n` +
+    `- *Selected Room:* ${room}\n` +
+    `- *Preferred Date:* ${date}\n` +
+    `- *Time Slot:* ${time}\n` +
+    (notes ? `- *Notes:* ${notes}\n` : '') +
     `\nPlease confirm the viewing slot!`;
 
   closeModal('modal-schedule');

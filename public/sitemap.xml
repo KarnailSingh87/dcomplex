@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://dcomplex.vercel.app/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dcomplex.vercel.app/images/dc_bedroom.jpg</image:loc>
+      <image:title>DC Complex Hamirpur Furnished Rooms and Living</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dcomplex.vercel.app/rooms</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://dcomplex.vercel.app/images/dc_bedroom.jpg</image:loc>
+      <image:title>Furnished Rooms and Flats for Rent in Baru Hamirpur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dcomplex.vercel.app/images/deluxe_room.jpg</image:loc>
+      <image:title>Deluxe Balcony Room Hamirpur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dcomplex.vercel.app/images/studio_room.jpg</image:loc>
+      <image:title>Studio Suite Hamirpur</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dcomplex.vercel.app/gym</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://dcomplex.vercel.app/images/gym_inside.jpg</image:loc>
+      <image:title>RFC Royal Fitness Club Gym Hamirpur Baru</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dcomplex.vercel.app/grocery</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://dcomplex.vercel.app/images/grocery_store.jpg</image:loc>
+      <image:title>Diwan General Store Grocery Mart Baru Hamirpur</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dcomplex.vercel.app/nearby</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

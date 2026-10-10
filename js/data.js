@@ -2,7 +2,7 @@
 export const COMPLEX_INFO = {
   name: "DC Complex Hamirpur",
   shortName: "DC Rooms",
-  tagline: "Roadside Living & Retail • Thoughtful Living in Hamirpur",
+  tagline: "Roadside Living & Retail &bull; Thoughtful Living in Hamirpur",
   phone: "+916230013209",
   phoneDisplay: "+91 62300 13209",
   whatsappUrl: "https://wa.me/916230013209?text=Hi%2C%20I%20am%20inquiring%20about%20rooms%20and%20amenities%20at%20DC%20Complex%20Hamirpur",
@@ -90,15 +90,15 @@ export const CONVENIENCES = [
 
 export const GYM_DATA = {
   title: "DC Fitness Club",
-  locationBadge: "1st & 2nd Floor • In-House",
+  locationBadge: "1st & 2nd Floor &bull; In-House",
   tagline: "Zero Winter Commute Fitness in Hamirpur",
-  hours: "6:00 AM – 9:00 AM • 5:00 PM – 9:00 PM",
+  hours: "6:00 AM &ndash; 9:00 AM &bull; 5:00 PM &ndash; 9:00 PM",
   heroImage: "./images/gym_inside.jpg",
-  overview: "A modern, well-lit residential fitness center inside DC Complex Hamirpur featuring commercial cardio treadmills, cross-trainers, heavy dumbbell racks (2.5kg – 35kg), squat racks, clean black rubber gym flooring, and expansive mountain pine daylight views.",
+  overview: "A modern, well-lit residential fitness center inside DC Complex Hamirpur featuring commercial cardio treadmills, cross-trainers, heavy dumbbell racks (2.5kg &ndash; 35kg), squat racks, clean black rubber gym flooring, and expansive mountain pine daylight views.",
   equipment: [
     { title: "Commercial Treadmills & Ellipticals", desc: "Shock-absorbing motorized running decks with digital tracking" },
     { title: "Olympic Barbell & Squat Cage", desc: "Sturdy rack with bumper plates and safety catchers for power lifting" },
-    { title: "Heavy Dumbbell Zone (2.5 – 35 kg)", desc: "Rubberized hex dumbbells with flat, incline, and decline utility benches" },
+    { title: "Heavy Dumbbell Zone (2.5 &ndash; 35 kg)", desc: "Rubberized hex dumbbells with flat, incline, and decline utility benches" },
     { title: "Multi-Station Dual Cable Cross", desc: "Adjustable pulley columns for complete upper and lower body workouts" },
     { title: "Stretching & Yoga Mat Zone", desc: "Anti-slip mats, foam rollers, resistance bands, and kettlebells" },
     { title: "Audio & Climate Controlled", desc: "Surround sound Bluetooth audio and fresh mountain cross-ventilation" }
@@ -119,7 +119,7 @@ export const GYM_DATA = {
       badge: "Exclusive Resident Discount",
       popular: true,
       desc: "Heavily subsidized discount rate exclusive to tenants living in DC Complex rooms.",
-      features: ["Unlimited 30-day access", "6:00 AM – 9:00 AM • 5:00 PM – 9:00 PM access", "Locker & filtered water", "Free routine guidance"]
+      features: ["Unlimited 30-day access", "6:00 AM &ndash; 9:00 AM &bull; 5:00 PM &ndash; 9:00 PM access", "Locker & filtered water", "Free routine guidance"]
     },
     {
       title: "Non-Resident Monthly",
@@ -134,9 +134,9 @@ export const GYM_DATA = {
 
 export const GROCERY_DATA = {
   title: "Daily Grocery Mart",
-  locationBadge: "Ground Floor • Active",
+  locationBadge: "Ground Floor &bull; Active",
   tagline: "Zero-Commute Everyday Essentials",
-  hours: "7:30 AM – 10:00 PM Daily",
+  hours: "7:30 AM &ndash; 10:00 PM Daily",
   heroImage: "./images/grocery_store.jpg",
   overview: "Located right on the ground floor of DC Complex. Stocked daily with farm-fresh milk, Himachali curd, pantry staples, toiletries, and late-night snacks so you never have to walk to the main bazaar in the cold.",
   categories: [
@@ -181,7 +181,7 @@ export const GROCERY_DATA = {
 };
 
 export const HOUSE_RULES = [
-  { icon: "bedtime", title: "Quiet Hours (10:30 PM – 6:30 AM)", desc: "Maintain low volume in corridors and rooms to respect residents studying and resting." },
+  { icon: "bedtime", title: "Quiet Hours (10:30 PM &ndash; 6:30 AM)", desc: "Maintain low volume in corridors and rooms to respect residents studying and resting." },
   { icon: "group", title: "Daytime Guests Welcomed", desc: "Friends and family can visit during the day. Overnight guests must be registered with reception." },
   { icon: "delete_outline", title: "Waste Segregation", desc: "Segregated dry and wet bins provided on every floor. Please dispose of waste responsibly." },
   { icon: "smoke_free", title: "No Smoking Indoors", desc: "Smoking is strictly prohibited inside rooms and corridors. A designated outdoor area is available." },
