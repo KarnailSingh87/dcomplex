@@ -164,27 +164,173 @@ body {
   animation-delay: 0.36s;
 }
 
-/* View transitions */
-.view-section {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-.view-section.active {
-  display: block;
-  opacity: 1;
-  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+/* ========================================================
+   APPLE PHONE TRANSITIONS & PERSISTENT ZERO-FLICKER CHROME
+   ======================================================== */
+
+/* Persistent Header & Bottom Tab Bar Glassmorphism */
+header.pt-safe {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.92);
+  view-transition-name: app-header;
+  z-index: 50;
+  will-change: transform;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+nav.pb-safe {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.92);
+  view-transition-name: app-tabbar;
+  z-index: 50;
+  will-change: transform;
+}
+
+main {
+  view-transition-name: app-main-content;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* iOS Spring Tab Bounce */
+@keyframes iosTabBounce {
+  0% { transform: scale(1); }
+  25% { transform: scale(0.82); }
+  60% { transform: scale(1.18); }
+  85% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+.ios-tab-bounce {
+  animation: iosTabBounce 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* Apple Touch Feedback (Haptic simulation) */
+.ios-touch {
+  transition: transform 0.16s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.16s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.ios-touch:active {
+  transform: scale(0.965);
+  opacity: 0.86;
+}
+
+/* VIEW TRANSITIONS API (Hardware-Accelerated GPU Compositing) */
+::view-transition-group(app-header),
+::view-transition-group(app-tabbar) {
+  animation: none !important;
+  z-index: 100 !important;
+}
+
+::view-transition-old(app-header),
+::view-transition-new(app-header),
+::view-transition-old(app-tabbar),
+::view-transition-new(app-tabbar) {
+  animation: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Direction: Forward (Left-to-Right in tab order) */
+html[data-transition-dir="forward"]::view-transition-old(app-main-content) {
+  animation: 200ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideOutLeft;
+}
+html[data-transition-dir="forward"]::view-transition-new(app-main-content) {
+  animation: 230ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideInRight;
+}
+
+/* Direction: Backward (Right-to-Left in tab order) */
+html[data-transition-dir="backward"]::view-transition-old(app-main-content) {
+  animation: 200ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideOutRight;
+}
+html[data-transition-dir="backward"]::view-transition-new(app-main-content) {
+  animation: 230ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideInLeft;
+}
+
+/* Direction: Push (Card drill-down) */
+html[data-transition-dir="push"]::view-transition-old(app-main-content) {
+  animation: 220ms cubic-bezier(0.32, 0.72, 0, 1) both iosScaleDown;
+}
+html[data-transition-dir="push"]::view-transition-new(app-main-content) {
+  animation: 250ms cubic-bezier(0.32, 0.72, 0, 1) both iosPushInRight;
+}
+
+/* Direction: Pop (Back button) */
+html[data-transition-dir="pop"]::view-transition-old(app-main-content) {
+  animation: 220ms cubic-bezier(0.32, 0.72, 0, 1) both iosPopOutRight;
+}
+html[data-transition-dir="pop"]::view-transition-new(app-main-content) {
+  animation: 250ms cubic-bezier(0.32, 0.72, 0, 1) both iosScaleUp;
+}
+
+@keyframes iosSlideOutLeft {
+  from { transform: translate3d(0, 0, 0); opacity: 1; }
+  to { transform: translate3d(-35px, 0, 0); opacity: 0; }
+}
+
+@keyframes iosSlideInRight {
+  from { transform: translate3d(35px, 0, 0); opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@keyframes iosSlideOutRight {
+  from { transform: translate3d(0, 0, 0); opacity: 1; }
+  to { transform: translate3d(35px, 0, 0); opacity: 0; }
+}
+
+@keyframes iosSlideInLeft {
+  from { transform: translate3d(-35px, 0, 0); opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@keyframes iosScaleDown {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.96); opacity: 0.25; }
+}
+
+@keyframes iosScaleUp {
+  from { transform: scale(0.96); opacity: 0.25; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes iosPushInRight {
+  from { transform: translate3d(100%, 0, 0); opacity: 0.9; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@keyframes iosPopOutRight {
+  from { transform: translate3d(0, 0, 0); opacity: 1; }
+  to { transform: translate3d(100%, 0, 0); opacity: 0.9; }
+}
+
+/* Fallback CSS classes for older browsers */
+.ios-exit-left {
+  animation: 150ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideOutLeft !important;
+}
+.ios-enter-right {
+  animation: 200ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideInRight !important;
+}
+.ios-exit-right {
+  animation: 150ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideOutRight !important;
+}
+.ios-enter-left {
+  animation: 200ms cubic-bezier(0.32, 0.72, 0, 1) both iosSlideInLeft !important;
+}
+.ios-exit-push {
+  animation: 150ms cubic-bezier(0.32, 0.72, 0, 1) both iosScaleDown !important;
+}
+.ios-enter-push {
+  animation: 220ms cubic-bezier(0.32, 0.72, 0, 1) both iosPushInRight !important;
+}
+.ios-exit-pop {
+  animation: 150ms cubic-bezier(0.32, 0.72, 0, 1) both iosPopOutRight !important;
+}
+.ios-enter-pop {
+  animation: 220ms cubic-bezier(0.32, 0.72, 0, 1) both iosScaleUp !important;
 }
 
 /* Device frame simulator for desktop preview */

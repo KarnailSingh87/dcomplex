@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..24,400..600,0..1,0" rel="stylesheet"/>
 <link rel="stylesheet" href="./css/styles.css" />
 <script type="module" src="/js/analytics.js"></script>
+<script type="module" src="/js/ios-router.js"></script>
 </head>
 <body class="bg-neutral-50 text-neutral-900 antialiased flex flex-col min-h-screen">
 <!-- TOP APP BAR -->
@@ -201,23 +202,23 @@
 <!-- BOTTOM TAB NAVIGATION (connecting to Rooms, Amenities, and Rules) -->
 <nav class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-neutral-200/80 pb-safe">
 <div class="h-16 max-w-lg mx-auto px-3 flex items-center justify-around">
-<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900" href="index.html">
+<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item" href="index.html">
 <span class="material-symbols-outlined text-[22px]">home</span>
 <span class="text-[11px]">Home</span>
 </a>
-<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900" href="rooms.html">
+<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item" href="rooms.html">
 <span class="material-symbols-outlined text-[22px]">bed</span>
 <span class="text-[11px]">Rooms</span>
 </a>
-<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900" href="nearby.html">
+<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item" href="nearby.html">
 <span class="material-symbols-outlined text-[22px]">explore</span>
 <span class="text-[11px]">Nearby</span>
 </a>
-<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900" href="gym.html">
+<a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item" href="gym.html">
 <span class="material-symbols-outlined text-[22px]">fitness_center</span>
 <span class="text-[11px]">Amenities</span>
 </a>
-<a class="flex flex-col items-center justify-center gap-0.5 text-primary font-bold" href="grocery.html">
+<a class="flex flex-col items-center justify-center gap-0.5 text-primary font-bold ios-touch ios-tab-item active" href="grocery.html">
 <span class="material-symbols-outlined text-[22px]">storefront</span>
 <span class="text-[11px]">Mart</span>
 </a>

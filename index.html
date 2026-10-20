@@ -137,6 +137,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/styles.css" />
   <script type="module" src="/js/analytics.js"></script>
+  <script type="module" src="/js/ios-router.js"></script>
 </head>
 
 <body class="bg-neutral-50 text-neutral-900 antialiased flex flex-col min-h-screen">
@@ -202,8 +203,8 @@
     <section class="flex flex-col gap-5">
       <!-- CARD 1: DC Rooms -->
       <article
-        class="group cursor-pointer bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-200 active:scale-[0.99] hover:border-neutral-300"
-        onclick="window.location.href='rooms.html'">
+        class="group cursor-pointer bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-200 ios-touch hover:border-neutral-300"
+        data-ios-link="rooms.html">
         <div class="relative w-full aspect-[16/10] bg-neutral-100 overflow-hidden">
           <img alt="DC Rooms" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             src="./images/dc_bedroom.jpg?v=2" />
@@ -249,8 +250,8 @@
       </article>
       <!-- CARD 2: RFC - Royal Fitness Club -->
       <article
-        class="group cursor-pointer bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-200 active:scale-[0.99] hover:border-neutral-300"
-        onclick="window.location.href='gym.html'">
+        class="group cursor-pointer bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-200 ios-touch hover:border-neutral-300"
+        data-ios-link="gym.html">
         <div class="relative w-full aspect-[16/10] bg-neutral-100 overflow-hidden">
           <img alt="RFC - Royal Fitness Club"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -295,8 +296,8 @@
       </article>
       <!-- CARD 3: Diwan General Store -->
       <article
-        class="group cursor-pointer bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-200 active:scale-[0.99] hover:border-neutral-300"
-        onclick="window.location.href='grocery.html'">
+        class="group cursor-pointer bg-white rounded-2xl border border-neutral-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-200 ios-touch hover:border-neutral-300"
+        data-ios-link="grocery.html">
         <div class="relative w-full aspect-[16/10] bg-neutral-100 overflow-hidden">
           <img alt="Diwan General Store"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -574,26 +575,26 @@
   <!-- BOTTOM TAB NAVIGATION (Home, Rooms, Nearby, Amenities, Mart) -->
   <nav class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-neutral-200/80 pb-safe">
     <div class="h-16 max-w-lg mx-auto px-3 flex items-center justify-around">
-      <a class="flex flex-col items-center justify-center gap-0.5 text-primary font-bold" href="index.html">
+      <a class="flex flex-col items-center justify-center gap-0.5 text-primary font-bold ios-touch ios-tab-item active" href="index.html">
         <span class="material-symbols-outlined text-[22px]">home</span>
         <span class="text-[11px]">Home</span>
       </a>
-      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors"
+      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item"
         href="rooms.html">
         <span class="material-symbols-outlined text-[22px]">bed</span>
         <span class="text-[11px]">Rooms</span>
       </a>
-      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors"
+      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item"
         href="nearby.html">
         <span class="material-symbols-outlined text-[22px]">explore</span>
         <span class="text-[11px]">Nearby</span>
       </a>
-      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors"
+      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item"
         href="gym.html">
         <span class="material-symbols-outlined text-[22px]">fitness_center</span>
         <span class="text-[11px]">Amenities</span>
       </a>
-      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors"
+      <a class="flex flex-col items-center justify-center gap-0.5 text-neutral-600 hover:text-neutral-900 transition-colors ios-touch ios-tab-item"
         href="grocery.html">
         <span class="material-symbols-outlined text-[22px]">storefront</span>
         <span class="text-[11px]">Mart</span>
