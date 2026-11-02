@@ -23,7 +23,7 @@ export const ROOMS_DATA = [
     period: "/month",
     status: "Available (2 Left)",
     statusColor: "emerald",
-    image: "./images/deluxe_room.jpg",
+    image: "https://i.pinimg.com/736x/e5/c9/33/e5c93333efe79b5d5925a46da154c753.jpg",
     description: "Sunlit mountain-view room in Hamirpur with a spacious walkout balcony framing lush pine green mountains, premium carved teak wood bed with Himachali runner, modern warm ambiance with soft indoor lighting, and private ensuite.",
     features: [
       "Private Walkout Pine-View Balcony",
@@ -43,7 +43,7 @@ export const ROOMS_DATA = [
     period: "/month",
     status: "Available (1 Left)",
     statusColor: "emerald",
-    image: "./images/standard_room.jpg",
+    image: "https://i.pinimg.com/736x/dd/c8/6d/ddc86dd1b6bba8e24ff39883ea21d098.jpg",
     description: "Cozy standard furnished bedroom in Hamirpur featuring a sturdy dark oak storage box bed, neat cotton quilt, private clean tiled washroom with wall geyser, natural sunlight through large window with warm drapes.",
     features: [
       "Sturdy Dark Oak Storage Bed with Mattress",
@@ -63,7 +63,7 @@ export const ROOMS_DATA = [
     period: "/month",
     status: "Waitlist for Next Month",
     statusColor: "amber",
-    image: "./images/studio_room.jpg",
+    image: "https://i.pinimg.com/1200x/70/32/4a/70324a2c0859549a2840c7684e32a8ed.jpg",
     description: "Spacious studio suite apartment with an open polished granite kitchenette counter, induction stove setup, wooden shelving, attached hill-view terrace window, and comfortable study desk workstation.",
     features: [
       "Granite Kitchenette with Induction Friendly Setup",
