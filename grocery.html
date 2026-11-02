@@ -173,6 +173,24 @@
 </div>
 </div>
 </div>
+<!-- Google Business Profile & Reviews Card -->
+<div class="bg-surface-container-lowest border border-neutral-200/80 rounded-xl p-4 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-neutral-100 flex-shrink-0 p-1 flex items-center justify-center border border-neutral-200 cursor-pointer hover:opacity-90 transition-opacity" onclick="openModal('modal-google-qr')">
+<img alt="DIWAN GENERAL STORE QR" class="w-full h-full object-contain" src="./images/diwan_store_google_qr_500.png"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Google Business Profile</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Check store ratings &amp; reviews</p>
+</div>
+</div>
+<button class="h-9 px-3 rounded-lg bg-primary text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform hover:bg-primary/90 flex-shrink-0" onclick="openModal('modal-google-qr')">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span>View QR</span>
+</button>
+</div>
 <!-- Quick Interactive Order / Contact Action Card -->
 <div class="bg-primary text-white rounded-xl p-4 shadow-md flex flex-col gap-3.5">
 <div class="flex items-center justify-between">
@@ -408,6 +426,13 @@
 <span class="font-medium text-neutral-800">Billing &amp; Payments</span>
 <span class="font-semibold text-primary">Cash &amp; Fast UPI Scanner</span>
 </div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-neutral-50 border border-neutral-200 cursor-pointer hover:bg-neutral-100 transition-colors" onclick="closeModal('modal-store'); openModal('modal-google-qr');">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">qr_code_2</span>
+<span class="font-medium text-neutral-800">Google Business QR</span>
+</div>
+<span class="font-semibold text-primary flex items-center gap-0.5 text-[11px]">View <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
 <div class="pt-2 flex items-center gap-2">
 <a class="flex-1 h-9 rounded-lg bg-primary text-white font-semibold flex items-center justify-center gap-1 active:scale-95 transition-all" href="tel:+916230013209">
 <span class="material-symbols-outlined text-[16px]">call</span>
@@ -493,6 +518,34 @@
 <button class="h-9 px-4 rounded-lg bg-neutral-100 font-semibold text-neutral-700 text-xs hover:bg-neutral-200 transition-colors" onclick="closeModal('modal-contact')">
             Close
           </button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL 6: GOOGLE BUSINESS QR / REVIEW -->
+<div class="modal-backdrop fixed inset-0 z-50 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none flex items-end sm:items-center justify-center p-0 sm:p-4 transition-all" id="modal-google-qr">
+<div class="modal-panel bg-white w-full max-w-sm rounded-t-3xl sm:rounded-2xl overflow-hidden flex flex-col shadow-2xl transform translate-y-full sm:translate-y-4">
+<div class="p-4 border-b border-neutral-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">qr_code_2</span>
+<h3 class="text-base font-bold text-neutral-900">Google Business QR</h3>
+</div>
+<button aria-label="Close" class="w-8 h-8 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 flex items-center justify-center transition-colors" onclick="closeModal('modal-google-qr')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="p-5 flex flex-col items-center text-center gap-3">
+<div class="w-56 h-56 p-2 bg-white rounded-2xl shadow-[0_2px_12px_rgba(0,0,0,0.08)] border border-neutral-200/90 flex items-center justify-center">
+<img alt="DIWAN GENERAL STORE Google QR Code" class="w-full h-full object-contain" src="./images/diwan_store_google_qr_500.png"/>
+</div>
+<div>
+<h4 class="text-[15px] font-bold text-neutral-900">DIWAN GENERAL STORE</h4>
+<p class="text-xs text-neutral-500 mt-0.5">Scan with any camera or Google Lens to view store details and customer reviews</p>
+</div>
+<div class="w-full pt-1">
+<button class="w-full h-10 rounded-xl bg-neutral-100 font-semibold text-neutral-700 text-xs hover:bg-neutral-200 transition-colors" onclick="closeModal('modal-google-qr')">
+Done
+</button>
 </div>
 </div>
 </div>
