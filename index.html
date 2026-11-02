@@ -519,14 +519,9 @@
     <!-- MINIMALIST CLASSIC FOOTER -->
     <footer class="mt-4 pt-6 border-t border-neutral-200/80 flex flex-col gap-5 text-neutral-700">
       <!-- Brand & Address -->
-      <div class="flex flex-col gap-1.5">
-        <div class="flex items-center gap-2">
-          <span class="text-base font-bold text-neutral-900">DC Complex</span>
-          <span class="text-xs text-neutral-600 font-medium">&bull; Hamirpur</span>
-        </div>
-        <p class="text-xs text-neutral-600 leading-relaxed">
-          Roadside Main Road, Near Hamirpur Bus Stand Zone, Hamirpur &ndash; 177001
-        </p>
+      <div class="flex items-center gap-2">
+        <span class="text-base font-bold text-neutral-900">DC Complex</span>
+        <span class="text-xs text-neutral-600 font-medium">&bull; Baru Hamirpur 177001</span>
       </div>
       <!-- Direct Map Navigation: DIWAN GENERAL STORE -->
       <div id="navigation-card"
@@ -570,11 +565,18 @@
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
           <!-- Google Search Business Profile Link -->
-          <a class="h-10 px-4 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-700 font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
-            href="https://www.google.com/search?kgmid=/g/11fs8cby8b&q=DIWAN+GENERAL+STORE" target="_blank">
-            <span class="material-symbols-outlined text-[16px] text-amber-600">travel_explore</span>
-            View Google Business Profile
-          </a>
+          <div class="grid grid-cols-2 gap-2">
+            <a class="h-10 px-3 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-700 font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
+              href="https://www.google.com/search?kgmid=/g/11fs8cby8b&q=DIWAN+GENERAL+STORE" target="_blank">
+              <span class="material-symbols-outlined text-[16px] text-amber-600">travel_explore</span>
+              Google Profile
+            </a>
+            <button onclick="openModal('modal-google-qr')"
+              class="h-10 px-3 rounded-xl border border-primary/30 bg-primary/5 hover:bg-primary/10 text-primary font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+              Google QR Code
+            </button>
+          </div>
         </div>
       </div>
       <!-- Quick Desk & Visiting Details -->
@@ -595,30 +597,6 @@
             Direct WhatsApp Inquiries
           </a>
           <span class="text-[11px] text-neutral-600">Instant Reply</span>
-        </div>
-      </div>
-
-      <!-- Verified Local Business Directory & NAP Block -->
-      <div class="rounded-2xl bg-white border border-neutral-200/90 p-4 shadow-sm flex flex-col gap-2.5 text-xs">
-        <div class="flex items-center justify-between border-b border-neutral-100 pb-2">
-          <div class="flex items-center gap-1.5 font-bold text-neutral-900">
-            <span class="material-symbols-outlined text-[17px] text-emerald-600">verified</span>
-            <span>Verified Local Business (Hamirpur)</span>
-          </div>
-          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800">Govt Reg.</span>
-        </div>
-        <div class="flex flex-col gap-1 text-[11px] text-neutral-600 leading-relaxed">
-          <div><strong class="text-neutral-800">Business:</strong> DC Complex (Furnished Rooms, RFC Gym &amp; Grocery Mart)</div>
-          <div><strong class="text-neutral-800">Address:</strong> Near Baru Chowk, Hamirpur - Darkoti Road, Hamirpur HP 177001</div>
-          <div><strong class="text-neutral-800">Direct Phone:</strong> <a href="tel:+916230013209" class="text-primary font-semibold hover:underline">+91 62300 13209</a> &bull; Landline: <a href="tel:01972358112" class="text-primary hover:underline">01972-358112</a></div>
-        </div>
-        <div class="flex flex-wrap gap-1.5 pt-1 border-t border-neutral-100">
-          <span class="text-[10px] px-2 py-0.5 rounded-md bg-neutral-100 text-neutral-700 font-medium">Google Maps</span>
-          <span class="text-[10px] px-2 py-0.5 rounded-md bg-neutral-100 text-neutral-700 font-medium">Justdial</span>
-          <span class="text-[10px] px-2 py-0.5 rounded-md bg-neutral-100 text-neutral-700 font-medium">IndiaMART</span>
-          <span class="text-[10px] px-2 py-0.5 rounded-md bg-neutral-100 text-neutral-700 font-medium">Magicbricks</span>
-          <span class="text-[10px] px-2 py-0.5 rounded-md bg-neutral-100 text-neutral-700 font-medium">99acres</span>
-          <span class="text-[10px] px-2 py-0.5 rounded-md bg-neutral-100 text-neutral-700 font-medium">Zero Brokerage</span>
         </div>
       </div>
 
@@ -1073,11 +1051,18 @@
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
           <!-- Google Search Business Profile Link -->
-          <a class="h-10 px-4 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-700 font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
-            href="https://www.google.com/search?kgmid=/g/11fs8cby8b&q=DIWAN+GENERAL+STORE" target="_blank">
-            <span class="material-symbols-outlined text-[16px] text-amber-600">travel_explore</span>
-            View Google Business Profile
-          </a>
+          <div class="grid grid-cols-2 gap-2">
+            <a class="h-10 px-3 rounded-xl border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-700 font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors"
+              href="https://www.google.com/search?kgmid=/g/11fs8cby8b&q=DIWAN+GENERAL+STORE" target="_blank">
+              <span class="material-symbols-outlined text-[16px] text-amber-600">travel_explore</span>
+              Google Profile
+            </a>
+            <button onclick="openModal('modal-google-qr')"
+              class="h-10 px-3 rounded-xl border border-primary/30 bg-primary/5 hover:bg-primary/10 text-primary font-semibold text-xs flex items-center justify-center gap-1.5 transition-colors">
+              <span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+              Google QR Code
+            </button>
+          </div>
         </div>
       </div>
     </div>
